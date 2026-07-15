@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-porcelain: #f4f2ec;
+  --color-ink: #14383f;
+  --color-sun: #e9a13b;
+  --color-sky: #dfe9e4;
+  --color-dusk: #3e6e68;
+
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+/* Base */
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--color-sun);
+  color: var(--color-ink);
+}
+
+/* Destination marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee 42s linear infinite;
+}
+
+/* Scroll reveal (JS adds .revealed) */
+.reveal {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* Sun rises gently on load */
+@keyframes sunrise {
+  from { transform: translateY(2.5rem); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.sunrise {
+  animation: sunrise 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.2s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .marquee-track { animation: none; }
+  .sunrise { animation: none; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
