@@ -366,6 +366,61 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============================================================
+   Sticky stacking cards
+   ============================================================ */
+.stack-section { padding: 96px 0 120px; }
+.stack-head { text-align: left; max-width: 780px; margin: 0 0 48px; }
+.stack { display: flex; flex-direction: column; gap: 28px; }
+.stack-card {
+  position: sticky;
+  top: calc(96px + var(--i) * 22px);
+  min-height: 440px;
+  background: #101015;
+  color: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 48px 52px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 -18px 40px rgba(0, 0, 0, 0.45), 0 24px 60px rgba(10, 31, 60, 0.18);
+}
+.stack-title {
+  font-family: var(--font);
+  font-size: clamp(40px, 5.5vw, 68px);
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1;
+  color: #eef2f6;
+}
+.stack-foot { margin-top: auto; }
+.stack-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+.stack-pills span {
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 999px;
+  padding: 6px 15px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.92);
+  white-space: nowrap;
+}
+.stack-foot p {
+  max-width: 660px;
+  font-size: 18px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.8);
+}
+@media (max-width: 760px) {
+  .stack-section { padding: 64px 0 80px; }
+  .stack-head { margin-bottom: 32px; }
+  .stack-card { min-height: 340px; padding: 32px 26px; top: calc(80px + var(--i) * 16px); border-radius: var(--radius-lg); }
+  .stack-title { font-size: clamp(34px, 9vw, 46px); letter-spacing: -1px; }
+  .stack-pills { margin-bottom: 16px; }
+  .stack-pills span { font-size: 12px; padding: 5px 12px; }
+  .stack-foot p { font-size: 15px; }
+}
+
+/* ============================================================
    Why Cozmo — bento
    ============================================================ */
 .why { padding: 96px 0; }
@@ -761,6 +816,58 @@ img { max-width: 100%; display: block; }
             <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L16 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke-linejoin="round"/></svg>24/7 Support</span>
             <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 16l20-7-7 12-2-5-5-2z" stroke-linejoin="round"/></svg>Airport Transfers</span>
             <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></svg>Visa Assistance</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Sticky stacking cards ===== -->
+  <section class="section stack-section">
+    <div class="container">
+      <div class="section-head stack-head">
+        <h2 class="section-title">Everything for your <span class="accent-i">journey</span></h2>
+        <p class="section-sub">From the first search to the return flight, explore the services that carry travellers end to end.</p>
+      </div>
+
+      <div class="stack">
+        <article class="stack-card" style="--i:0">
+          <h3 class="stack-title">Flight Booking</h3>
+          <div class="stack-foot">
+            <div class="stack-pills"><span>Economy</span><span>Business</span><span>First Class</span></div>
+            <p>Access 130+ airlines across every alliance and low-cost carrier. We find the fares, routes and cabins that fit each traveller — from a quick city hop to a multi-city itinerary.</p>
+          </div>
+        </article>
+
+        <article class="stack-card" style="--i:1">
+          <h3 class="stack-title">Hotel Reservations</h3>
+          <div class="stack-foot">
+            <div class="stack-pills"><span>City Hotels</span><span>Resorts</span><span>Serviced Apartments</span></div>
+            <p>Curated stays for business and leisure, with negotiated rates and flexible terms. From downtown business hotels to beachfront resorts, booked and managed in one place.</p>
+          </div>
+        </article>
+
+        <article class="stack-card" style="--i:2">
+          <h3 class="stack-title">Car Rental</h3>
+          <div class="stack-foot">
+            <div class="stack-pills"><span>Airport Transfer</span><span>Chauffeur</span><span>Self-drive</span></div>
+            <p>Door-to-door ground transport wherever the journey lands. Airport transfers, chauffeur-driven cars and self-drive rentals, arranged to match the trip and the budget.</p>
+          </div>
+        </article>
+
+        <article class="stack-card" style="--i:3">
+          <h3 class="stack-title">Visa Services</h3>
+          <div class="stack-foot">
+            <div class="stack-pills"><span>Tourist Visa</span><span>Business Visa</span><span>Transit Visa</span></div>
+            <p>End-to-end visa support that takes the paperwork off the traveller. Document checks, applications and appointments handled by specialists across our network.</p>
+          </div>
+        </article>
+
+        <article class="stack-card" style="--i:4">
+          <h3 class="stack-title">Travel Insurance</h3>
+          <div class="stack-foot">
+            <div class="stack-pills"><span>Medical Cover</span><span>Trip Cancellation</span><span>Baggage</span></div>
+            <p>Cover that travels with them from departure to return. Medical protection, trip cancellation and baggage cover, with 24x7 assistance whenever plans change.</p>
           </div>
         </article>
       </div>
