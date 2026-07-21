@@ -393,14 +393,40 @@
   </footer>
 
   <script>
-    // Mobile navigation toggle
     (function () {
       var toggle = document.querySelector('.nav-toggle');
       var nav = document.querySelector('.main-nav');
-      if (!toggle || !nav) return;
-      toggle.addEventListener('click', function () {
-        var open = nav.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+
+      // Mobile menu open/close
+      if (toggle && nav) {
+        toggle.addEventListener('click', function () {
+          var open = nav.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+
+      // Dropdown accordions — only active while the hamburger is visible (mobile)
+      var isMobileNav = function () {
+        return toggle && getComputedStyle(toggle).display !== 'none';
+      };
+      document.querySelectorAll('.nav-item.has-dropdown > .nav-link').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          if (!isMobileNav()) return;
+          var item = btn.parentElement;
+          var open = item.classList.toggle('open');
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      });
+
+      // Reset accordions when leaving mobile so desktop hover behaves cleanly
+      window.addEventListener('resize', function () {
+        if (!isMobileNav()) {
+          document.querySelectorAll('.nav-item.has-dropdown.open').forEach(function (item) {
+            item.classList.remove('open');
+            var b = item.querySelector('.nav-link');
+            if (b) b.setAttribute('aria-expanded', 'false');
+          });
+        }
       });
     })();
   </script>
