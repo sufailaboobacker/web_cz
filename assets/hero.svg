@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1200" viewBox="0 0 1920 1200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Paris skyline placeholder">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#aebac4"/>
+      <stop offset="45%" stop-color="#c3ccd2"/>
+      <stop offset="100%" stop-color="#d9d2c4"/>
+    </linearGradient>
+    <linearGradient id="haze" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c9b89a" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#b7a688" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1920" height="1200" fill="url(#sky)"/>
+
+  <!-- Soft clouds -->
+  <g fill="#ffffff" opacity="0.35">
+    <ellipse cx="380" cy="200" rx="260" ry="70"/>
+    <ellipse cx="1500" cy="150" rx="300" ry="60"/>
+    <ellipse cx="1650" cy="320" rx="220" ry="50"/>
+  </g>
+
+  <!-- Distant city rooftops -->
+  <g fill="#9a9488" opacity="0.6">
+    <rect x="0" y="760" width="1920" height="440"/>
+  </g>
+  <g fill="#8c8578" opacity="0.5">
+    <rect x="120" y="700" width="180" height="120"/>
+    <rect x="360" y="720" width="150" height="110"/>
+    <rect x="1400" y="710" width="200" height="120"/>
+    <rect x="1650" y="690" width="160" height="140"/>
+  </g>
+
+  <!-- Eiffel Tower silhouette (right of centre) -->
+  <g fill="#6f6a60" opacity="0.7" transform="translate(1180,0)">
+    <!-- legs -->
+    <path d="M-70 780 L-20 300 L20 300 L70 780 L40 780 L20 460 L-20 460 L-40 780 Z"/>
+    <!-- mid tower -->
+    <path d="M-24 300 L-10 150 L10 150 L24 300 Z"/>
+    <!-- upper tower -->
+    <path d="M-11 150 L-4 60 L4 60 L11 150 Z"/>
+    <!-- spire -->
+    <path d="M-4 60 L0 10 L4 60 Z"/>
+    <!-- arch platform -->
+    <path d="M-58 470 q58 -40 116 0 l0 24 q-58 -34 -116 0 Z"/>
+    <!-- second platform -->
+    <path d="M-30 310 q30 -20 60 0 l0 16 q-30 -16 -60 0 Z"/>
+  </g>
+
+  <!-- Warm foreground haze -->
+  <rect x="0" y="600" width="1920" height="600" fill="url(#haze)"/>
+</svg>
