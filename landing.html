@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Plan your trip — cozmo® travel | Free quote in 24 hours</title>
+  <meta name="description" content="Tell Cozmo Travel where you want to go and get a tailored quote within 24 hours. Flights, holidays, visas and corporate travel, handled by real people." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,420;0,9..144,560;1,9..144,340;1,9..144,420&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='14' r='9' fill='%23e9a13b'/%3E%3Crect y='22' width='32' height='3' fill='%2314383f'/%3E%3C/svg%3E" />
+</head>
+<body class="bg-porcelain font-sans text-ink antialiased">
+
+  <a href="#quote" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-ink focus:px-5 focus:py-2 focus:text-porcelain">Skip to quote form</a>
+
+  <!-- Minimal nav (single action to keep the page focused) -->
+  <header class="absolute inset-x-0 top-0 z-30">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-5 text-porcelain sm:px-8" aria-label="Main">
+      <a href="index.html" class="font-display text-2xl lowercase tracking-tight focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sun">
+        cozmo<span class="align-super text-[0.55em]">®</span>
+      </a>
+      <a href="tel:+97165087777" class="hidden items-center gap-2 text-sm font-medium text-porcelain/90 transition-colors hover:text-sun focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sun sm:inline-flex">
+        <span aria-hidden="true">☎</span> +971 6 508 7777
+      </a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero + quote form -->
+    <section class="relative overflow-hidden bg-ink text-porcelain">
+      <!-- Ambient sun glow -->
+      <div class="pointer-events-none absolute -right-40 -top-40 h-[34rem] w-[34rem] rounded-full bg-sun/25 blur-3xl" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -bottom-52 left-1/2 h-[30rem] w-[30rem] -translate-x-1/2 rounded-full bg-dusk/40 blur-3xl" aria-hidden="true"></div>
+
+      <div class="relative mx-auto grid max-w-6xl gap-12 px-5 pb-20 pt-32 sm:px-8 sm:pt-36 lg:grid-cols-[1fr_0.9fr] lg:items-center lg:gap-10 lg:pb-28">
+        <!-- Left: pitch -->
+        <div>
+          <p class="inline-flex items-center gap-2 rounded-full border border-porcelain/25 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-sun">
+            <span class="h-1.5 w-1.5 rounded-full bg-sun"></span> Free quote · no obligation
+          </p>
+          <h1 class="mt-7 font-display text-5xl leading-[1.05] tracking-tight sm:text-6xl" style="font-weight: 420;">
+            Tell us where.<br /><em class="text-sun" style="font-weight: 340;">We'll handle the how.</em>
+          </h1>
+          <p class="mt-6 max-w-lg text-lg leading-relaxed text-porcelain/75">
+            Share a few details and one of our travel consultants sends you a tailored plan — flights, stays and visas — within 24 hours. Real people, fair fares, no bots.
+          </p>
+
+          <ul class="mt-9 grid max-w-lg gap-3 text-sm sm:grid-cols-2">
+            <li class="flex items-center gap-3">
+              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-sun/20 text-sun" aria-hidden="true">✓</span>
+              Replies within 24 hours
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-sun/20 text-sun" aria-hidden="true">✓</span>
+              IATA-accredited agency
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-sun/20 text-sun" aria-hidden="true">✓</span>
+              Visas managed end-to-end
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-sun/20 text-sun" aria-hidden="true">✓</span>
+              24/7 support while you travel
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: quote form card -->
+        <div id="quote" class="rounded-3xl bg-porcelain p-6 text-ink shadow-2xl shadow-ink/40 sm:p-8">
+          <h2 class="font-display text-2xl" style="font-weight: 420;">Get your free quote</h2>
+          <p class="mt-1.5 text-sm text-ink/60">Takes about a minute. No payment details needed.</p>
+
+          <form class="mt-6 space-y-4" id="quote-form" novalidate>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label for="name" class="block text-sm font-medium">Full name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required
+                  class="mt-1.5 w-full rounded-xl border border-ink/15 bg-white px-4 py-2.5 text-sm outline-none transition focus:border-dusk focus:ring-2 focus:ring-dusk/30" placeholder="Jane Traveller" />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required
+                  class="mt-1.5 w-full rounded-xl border border-ink/15 bg-white px-4 py-2.5 text-sm outline-none transition focus:border-dusk focus:ring-2 focus:ring-dusk/30" placeholder="jane@email.com" />
+              </div>
+            </div>
+
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label for="destination" class="block text-sm font-medium">Where to?</label>
+                <input id="destination" name="destination" type="text" list="dest-list" required
+                  class="mt-1.5 w-full rounded-xl border border-ink/15 bg-white px-4 py-2.5 text-sm outline-none transition focus:border-dusk focus:ring-2 focus:ring-dusk/30" placeholder="Maldives, Tbilisi…" />
+                <datalist id="dest-list">
+                  <option value="Dubai"></option><option value="Maldives"></option><option value="Tbilisi"></option>
+                  <option value="Zanzibar"></option><option value="Istanbul"></option><option value="Bangkok"></option>
+                  <option value="Baku"></option><option value="Cairo"></option><option value="London"></option>
+                </datalist>
+              </div>
+              <div>
+                <label for="travellers" class="block text-sm font-medium">Travellers</label>
+                <select id="travellers" name="travellers"
+                  class="mt-1.5 w-full rounded-xl border border-ink/15 bg-white px-4 py-2.5 text-sm outline-none transition focus:border-dusk focus:ring-2 focus:ring-dusk/30">
+                  <option>1 adult</option>
+                  <option>2 adults</option>
+                  <option>Family (with kids)</option>
+                  <option>Group (5+)</option>
+                  <option>Business trip</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="trip-type" class="block text-sm font-medium">What do you need?</label>
+              <div class="mt-2 flex flex-wrap gap-2" role="group" aria-label="Trip type">
+                <label class="cursor-pointer">
+                  <input type="checkbox" name="need" value="Flights" class="peer sr-only" />
+                  <span class="inline-block rounded-full border border-ink/20 px-4 py-1.5 text-sm transition peer-checked:border-ink peer-checked:bg-ink peer-checked:text-porcelain peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-sun">Flights</span>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="checkbox" name="need" value="Hotels" class="peer sr-only" />
+                  <span class="inline-block rounded-full border border-ink/20 px-4 py-1.5 text-sm transition peer-checked:border-ink peer-checked:bg-ink peer-checked:text-porcelain peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-sun">Hotels</span>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="checkbox" name="need" value="Visa" class="peer sr-only" />
+                  <span class="inline-block rounded-full border border-ink/20 px-4 py-1.5 text-sm transition peer-checked:border-ink peer-checked:bg-ink peer-checked:text-porcelain peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-sun">Visa</span>
+                </label>
+                <label class="cursor-pointer">
+                  <input type="checkbox" name="need" value="Full package" class="peer sr-only" />
+                  <span class="inline-block rounded-full border border-ink/20 px-4 py-1.5 text-sm transition peer-checked:border-ink peer-checked:bg-ink peer-checked:text-porcelain peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-sun">Full package</span>
+                </label>
+              </div>
+            </div>
+
+            <button type="submit"
+              class="w-full rounded-full bg-sun px-6 py-3.5 font-semibold text-ink transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink">
+              Send my request →
+            </button>
+            <p class="text-center text-xs text-ink/50">By submitting you agree to be contacted about your trip. We never share your details.</p>
+          </form>
+
+          <!-- Success state (revealed on submit) -->
+          <div id="quote-success" class="hidden text-center" role="status">
+            <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-dusk/15 text-2xl text-dusk" aria-hidden="true">✓</div>
+            <h2 class="mt-5 font-display text-2xl" style="font-weight: 420;">Request received</h2>
+            <p class="mt-2 text-ink/70">Thanks — a Cozmo consultant will email you a tailored quote within 24 hours. Keep an eye on your inbox.</p>
+            <a href="index.html" class="mt-6 inline-flex items-center gap-2 font-medium text-dusk">Back to homepage <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust bar -->
+    <section class="border-b border-ink/10 bg-sky/60" aria-label="Why travellers choose Cozmo">
+      <dl class="mx-auto grid max-w-6xl grid-cols-2 gap-y-8 px-5 py-12 text-center sm:px-8 lg:grid-cols-4">
+        <div>
+          <dt class="sr-only">Years in travel</dt>
+          <dd class="font-display text-4xl" style="font-weight: 420;">25+</dd>
+          <p class="mt-1 text-sm text-ink/60">years in travel</p>
+        </div>
+        <div>
+          <dt class="sr-only">Destinations served</dt>
+          <dd class="font-display text-4xl" style="font-weight: 420;">190+</dd>
+          <p class="mt-1 text-sm text-ink/60">destinations served</p>
+        </div>
+        <div>
+          <dt class="sr-only">Travellers looked after</dt>
+          <dd class="font-display text-4xl" style="font-weight: 420;">500k</dd>
+          <p class="mt-1 text-sm text-ink/60">travellers looked after</p>
+        </div>
+        <div>
+          <dt class="sr-only">Support availability</dt>
+          <dd class="font-display text-4xl" style="font-weight: 420;">24/7</dd>
+          <p class="mt-1 text-sm text-ink/60">support on the road</p>
+        </div>
+      </dl>
+    </section>
+
+    <!-- How it works -->
+    <section class="py-20 sm:py-24">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8">
+        <div class="reveal max-w-2xl">
+          <p class="text-xs font-semibold uppercase tracking-[0.25em] text-dusk">How it works</p>
+          <h2 class="mt-4 font-display text-4xl tracking-tight sm:text-5xl" style="font-weight: 420;">Three steps, <em style="font-weight: 340;">zero hassle.</em></h2>
+        </div>
+        <ol class="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
+          <li class="reveal border-t border-ink/15 pt-7">
+            <p class="font-display text-sm text-sun">01</p>
+            <h3 class="mt-3 font-display text-2xl" style="font-weight: 420;">Tell us the plan</h3>
+            <p class="mt-3 leading-relaxed text-ink/70">Fill the form with where, when and who's travelling. A minute is all it takes.</p>
+          </li>
+          <li class="reveal border-t border-ink/15 pt-7">
+            <p class="font-display text-sm text-sun">02</p>
+            <h3 class="mt-3 font-display text-2xl" style="font-weight: 420;">We build the quote</h3>
+            <p class="mt-3 leading-relaxed text-ink/70">A real consultant compares fares and routes, then sends a tailored plan within 24 hours.</p>
+          </li>
+          <li class="reveal border-t border-ink/15 pt-7">
+            <p class="font-display text-sm text-sun">03</p>
+            <h3 class="mt-3 font-display text-2xl" style="font-weight: 420;">You travel, we watch</h3>
+            <p class="mt-3 leading-relaxed text-ink/70">Book with confidence — visas, changes and 2am gate swaps are on us, not you.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Featured offers -->
+    <section class="bg-sky/60 py-20 sm:py-24">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8">
+        <div class="reveal max-w-2xl">
+          <p class="text-xs font-semibold uppercase tracking-[0.25em] text-dusk">This season</p>
+          <h2 class="mt-4 font-display text-4xl tracking-tight sm:text-5xl" style="font-weight: 420;">Escapes worth <em style="font-weight: 340;">packing for.</em></h2>
+        </div>
+        <div class="mt-12 grid gap-5 md:grid-cols-3">
+          <article class="reveal overflow-hidden rounded-3xl border border-ink/10 bg-porcelain">
+            <svg viewBox="0 0 400 240" class="w-full" aria-hidden="true">
+              <rect width="400" height="240" fill="#f2ddba" /><circle cx="200" cy="120" r="58" fill="#e9a13b" />
+              <path d="M0 190 q100 -26 200 0 t200 0 L400 240 L0 240 Z" fill="#3e6e68" />
+              <path d="M0 214 q100 -18 200 0 t200 0 L400 240 L0 240 Z" fill="#14383f" />
+            </svg>
+            <div class="p-6">
+              <h3 class="font-display text-2xl" style="font-weight: 420;">Maldives, 5 nights</h3>
+              <p class="mt-2 text-sm leading-relaxed text-ink/70">Overwater villa, half-board, seaplane transfers and return flights from the Gulf.</p>
+              <div class="mt-5 flex items-center justify-between">
+                <p class="font-display text-lg text-dusk">from AED 4,900<span class="text-sm text-ink/50"> /pp</span></p>
+                <a href="#quote" class="text-sm font-semibold text-ink underline-offset-4 hover:underline">Get a quote →</a>
+              </div>
+            </div>
+          </article>
+          <article class="reveal overflow-hidden rounded-3xl border border-ink/10 bg-porcelain">
+            <svg viewBox="0 0 400 240" class="w-full" aria-hidden="true">
+              <rect width="400" height="240" fill="#dfe9e4" /><circle cx="290" cy="86" r="46" fill="#e9a13b" />
+              <path d="M0 240 L70 130 L120 190 L190 90 L260 200 L330 140 L400 240 Z" fill="#3e6e68" />
+              <path d="M0 240 L120 175 L210 215 L320 165 L400 210 L400 240 Z" fill="#14383f" />
+            </svg>
+            <div class="p-6">
+              <h3 class="font-display text-2xl" style="font-weight: 420;">Tbilisi, 4 nights</h3>
+              <p class="mt-2 text-sm leading-relaxed text-ink/70">Old-town boutique stay, wine-country day trip and flights — a long weekend done right.</p>
+              <div class="mt-5 flex items-center justify-between">
+                <p class="font-display text-lg text-dusk">from AED 2,300<span class="text-sm text-ink/50"> /pp</span></p>
+                <a href="#quote" class="text-sm font-semibold text-ink underline-offset-4 hover:underline">Get a quote →</a>
+              </div>
+            </div>
+          </article>
+          <article class="reveal overflow-hidden rounded-3xl border border-ink/10 bg-porcelain">
+            <svg viewBox="0 0 400 240" class="w-full" aria-hidden="true">
+              <rect width="400" height="240" fill="#f2ddba" /><circle cx="110" cy="96" r="50" fill="#e9a13b" />
+              <path d="M0 240 L0 150 L60 150 L60 90 L100 90 L100 150 L160 150 L160 60 L200 60 L200 150 L400 150 L400 240 Z" fill="#14383f" />
+              <path d="M0 210 q100 -16 200 0 t200 0 L400 240 L0 240 Z" fill="#3e6e68" />
+            </svg>
+            <div class="p-6">
+              <h3 class="font-display text-2xl" style="font-weight: 420;">Dubai stopover, 3 nights</h3>
+              <p class="mt-2 text-sm leading-relaxed text-ink/70">City-centre hotel, desert evening and a flexible layover on your onward route.</p>
+              <div class="mt-5 flex items-center justify-between">
+                <p class="font-display text-lg text-dusk">from AED 1,450<span class="text-sm text-ink/50"> /pp</span></p>
+                <a href="#quote" class="text-sm font-semibold text-ink underline-offset-4 hover:underline">Get a quote →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="reveal mt-6 text-sm text-ink/50">Indicative prices, per person, twin-share. Your quote is built to your exact dates.</p>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 sm:py-24">
+      <div class="mx-auto max-w-6xl px-5 sm:px-8">
+        <div class="reveal max-w-2xl">
+          <p class="text-xs font-semibold uppercase tracking-[0.25em] text-dusk">In their words</p>
+          <h2 class="mt-4 font-display text-4xl tracking-tight sm:text-5xl" style="font-weight: 420;">Travellers who came <em style="font-weight: 340;">back for more.</em></h2>
+        </div>
+        <div class="mt-12 grid gap-5 md:grid-cols-3">
+          <figure class="reveal rounded-3xl border border-ink/10 bg-porcelain p-7">
+            <div class="text-sun" aria-hidden="true">★★★★★</div>
+            <blockquote class="mt-4 leading-relaxed text-ink/80">"Our visas were sorted in days and the whole itinerary just worked. First time I've travelled without a single hiccup."</blockquote>
+            <figcaption class="mt-5 text-sm font-medium">Priya M. <span class="font-normal text-ink/50">· Kochi → Baku</span></figcaption>
+          </figure>
+          <figure class="reveal rounded-3xl border border-ink/10 bg-porcelain p-7">
+            <div class="text-sun" aria-hidden="true">★★★★★</div>
+            <blockquote class="mt-4 leading-relaxed text-ink/80">"A flight got cancelled at midnight and they had me rebooked before I'd finished panicking. Worth every dirham."</blockquote>
+            <figcaption class="mt-5 text-sm font-medium">Omar A. <span class="font-normal text-ink/50">· Sharjah → Istanbul</span></figcaption>
+          </figure>
+          <figure class="reveal rounded-3xl border border-ink/10 bg-porcelain p-7">
+            <div class="text-sun" aria-hidden="true">★★★★★</div>
+            <blockquote class="mt-4 leading-relaxed text-ink/80">"We manage all our company travel through Cozmo now. Clear reporting, real humans, no drama."</blockquote>
+            <figcaption class="mt-5 text-sm font-medium">Lena K. <span class="font-normal text-ink/50">· Corporate travel</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-sky/60 py-20 sm:py-24">
+      <div class="mx-auto max-w-3xl px-5 sm:px-8">
+        <div class="reveal text-center">
+          <p class="text-xs font-semibold uppercase tracking-[0.25em] text-dusk">Good to know</p>
+          <h2 class="mt-4 font-display text-4xl tracking-tight sm:text-5xl" style="font-weight: 420;">Questions, answered.</h2>
+        </div>
+        <div class="reveal mt-12 divide-y divide-ink/10 border-y border-ink/10">
+          <details class="group py-5">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 font-medium marker:content-none [&::-webkit-details-marker]:hidden">
+              Does a quote cost anything?
+              <span class="shrink-0 text-dusk transition-transform group-open:rotate-45" aria-hidden="true">＋</span>
+            </summary>
+            <p class="mt-3 leading-relaxed text-ink/70">No. Quotes are free and there's no obligation to book. You only pay once you're happy with the plan.</p>
+          </details>
+          <details class="group py-5">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 font-medium marker:content-none [&::-webkit-details-marker]:hidden">
+              How fast will I hear back?
+              <span class="shrink-0 text-dusk transition-transform group-open:rotate-45" aria-hidden="true">＋</span>
+            </summary>
+            <p class="mt-3 leading-relaxed text-ink/70">Within 24 hours on business days — often much sooner. Urgent trip? Call us and we'll start straight away.</p>
+          </details>
+          <details class="group py-5">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 font-medium marker:content-none [&::-webkit-details-marker]:hidden">
+              Can you handle visas too?
+              <span class="shrink-0 text-dusk transition-transform group-open:rotate-45" aria-hidden="true">＋</span>
+            </summary>
+            <p class="mt-3 leading-relaxed text-ink/70">Yes — we manage applications, documents and timelines end-to-end for almost every destination we book.</p>
+          </details>
+          <details class="group py-5">
+            <summary class="flex cursor-pointer items-center justify-between gap-4 font-medium marker:content-none [&::-webkit-details-marker]:hidden">
+              What if my plans change after booking?
+              <span class="shrink-0 text-dusk transition-transform group-open:rotate-45" aria-hidden="true">＋</span>
+            </summary>
+            <p class="mt-3 leading-relaxed text-ink/70">Rebooking and changes are handled by your consultant, not a call centre. Support is available 24/7 while you're away.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="relative overflow-hidden bg-ink py-20 text-porcelain sm:py-28">
+      <div class="pointer-events-none absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-sun/25 blur-3xl" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-3xl px-5 text-center sm:px-8">
+        <h2 class="font-display text-4xl lowercase tracking-tight sm:text-5xl" style="font-weight: 420;">ready when you are.</h2>
+        <p class="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-porcelain/75">One short form and a tailored plan lands in your inbox within a day. No cost, no pressure.</p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <a href="#quote" class="rounded-full bg-sun px-7 py-3.5 font-semibold text-ink transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-porcelain">Get my free quote</a>
+          <a href="tel:+97165087777" class="rounded-full border border-porcelain/30 px-7 py-3.5 font-semibold transition-colors hover:border-porcelain focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sun">Or call us</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-ink/10 bg-porcelain">
+    <div class="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-10 sm:px-8 md:flex-row md:items-center md:justify-between">
+      <div>
+        <p class="font-display text-2xl lowercase tracking-tight">cozmo<span class="align-super text-[0.5em]">®</span></p>
+        <p class="mt-1 text-sm text-ink/60">a world, well travelled.</p>
+      </div>
+      <nav class="flex flex-wrap gap-x-8 gap-y-2 text-sm font-medium" aria-label="Footer">
+        <a href="index.html" class="transition-colors hover:text-dusk">Home</a>
+        <a href="index.html#services" class="transition-colors hover:text-dusk">Services</a>
+        <a href="index.html#destinations" class="transition-colors hover:text-dusk">Destinations</a>
+        <a href="#quote" class="transition-colors hover:text-dusk">Get a quote</a>
+      </nav>
+      <p class="text-sm text-ink/50">© 2026 Cozmo Travel.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      // Scroll reveal
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var items = document.querySelectorAll('.reveal');
+      if (reduced || !('IntersectionObserver' in window)) {
+        items.forEach(function (el) { el.classList.add('revealed'); });
+      } else {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) { entry.target.classList.add('revealed'); io.unobserve(entry.target); }
+          });
+        }, { threshold: 0.15 });
+        items.forEach(function (el) { io.observe(el); });
+      }
+
+      // Quote form: client-side validation + success state (no backend)
+      var form = document.getElementById('quote-form');
+      var success = document.getElementById('quote-success');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          if (!form.checkValidity()) { form.reportValidity(); return; }
+          form.classList.add('hidden');
+          success.classList.remove('hidden');
+          success.focus && success.setAttribute('tabindex', '-1');
+          success.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
