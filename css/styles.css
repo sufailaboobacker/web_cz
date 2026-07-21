@@ -21,8 +21,29 @@
   --radius-lg: 20px;
   --radius-xl: 28px;
 
-  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --serif: 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+  --font: 'Helvetica Neue', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --serif: 'Loretta Display VF', 'Loretta Display', 'Playfair Display', Georgia, 'Times New Roman', Times, serif;
+}
+
+/* ------------------------------------------------------------
+   Brand typefaces
+   Drop the font files into assets/fonts/ and these @font-face
+   rules pick them up automatically. Until then the stacks above
+   fall back to Helvetica Neue / a system serif.
+   ------------------------------------------------------------ */
+@font-face {
+  font-family: 'Loretta Display VF';
+  src: url('../assets/fonts/LorettaDisplayVF.woff2') format('woff2-variations'),
+       url('../assets/fonts/LorettaDisplayVF.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: local('Helvetica Neue'), local('HelveticaNeue');
+  font-weight: 300 900;
+  font-display: swap;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -67,11 +88,20 @@ img { max-width: 100%; display: block; }
 /* ============================================================
    Header
    ============================================================ */
-.site-header { position: absolute; inset: 0 0 auto 0; z-index: 20; background: var(--white); }
+.site-header { position: relative; z-index: 20; background: var(--white); }
 .header-inner {
   height: var(--header-height);
   display: flex; align-items: center; justify-content: space-between; gap: 24px;
 }
+.header-right { display: flex; align-items: center; gap: 28px; }
+.avatar {
+  width: 46px; height: 46px; border-radius: 50%;
+  background: #d9dde1;
+  border: none; flex: none;
+  background-size: cover; background-position: center;
+  transition: box-shadow 0.15s ease;
+}
+.avatar:hover { box-shadow: 0 0 0 3px rgba(26,107,240,0.25); }
 .brand {
   display: inline-flex; align-items: flex-start;
   font-weight: 800; font-size: 28px; letter-spacing: -0.5px; line-height: 1;
@@ -112,23 +142,29 @@ img { max-width: 100%; display: block; }
    Hero
    ============================================================ */
 .hero {
-  position: relative; min-height: 100vh; padding-top: var(--header-height);
-  display: flex; align-items: flex-end; overflow: hidden;
+  position: relative;
+  margin: 6px 28px 28px;
+  min-height: calc(100vh - 130px);
+  border-radius: 32px;
+  overflow: hidden;
+  display: flex; align-items: flex-end;
+  isolation: isolate;
 }
 .hero-media {
   position: absolute; inset: 0;
-  background-image: url('../assets/hero.svg');
-  background-size: cover; background-position: center 30%; z-index: 0;
+  background-image: url('../assets/hero.jpg'), url('../assets/hero-desert.svg');
+  background-size: cover; background-position: center 42%; z-index: 0;
 }
 .hero-overlay {
   position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 45%, rgba(0,0,0,0.18) 70%, rgba(0,0,0,0.45) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.25) 72%, rgba(0,0,0,0.5) 100%);
 }
-.hero-content { position: relative; z-index: 2; padding-bottom: 72px; color: var(--white); }
-.hero-eyebrow { font-family: var(--serif); font-style: italic; font-size: 30px; font-weight: 400; margin-bottom: 8px; text-shadow: 0 1px 12px rgba(0,0,0,0.35); }
+.hero-content { position: relative; z-index: 2; padding: 0 20px 64px; color: var(--white); }
+.hero-eyebrow { font-family: var(--serif); font-size: 34px; font-weight: 500; margin-bottom: 4px; text-shadow: 0 1px 14px rgba(0,0,0,0.4); }
 .hero-title {
-  font-size: clamp(56px, 10vw, 150px); line-height: 0.95; font-weight: 800;
-  letter-spacing: -2px; text-shadow: 0 2px 24px rgba(0,0,0,0.35);
+  font-family: var(--font);
+  font-size: clamp(56px, 10vw, 150px); line-height: 0.94; font-weight: 700;
+  letter-spacing: -3px; text-shadow: 0 2px 28px rgba(0,0,0,0.4);
 }
 
 /* ============================================================
@@ -390,8 +426,9 @@ img { max-width: 100%; display: block; }
   .nav-link { width: 100%; justify-content: space-between; padding: 16px 0; }
   .nav-actions { flex-direction: column; align-items: stretch; gap: 12px; margin-top: 20px; }
   .btn { width: 100%; padding: 13px 22px; }
-  .hero-content { padding-bottom: 48px; }
-  .hero-eyebrow { font-size: 22px; }
+  .hero { margin: 4px 12px 16px; border-radius: 22px; min-height: calc(100vh - 100px); }
+  .hero-content { padding: 0 12px 40px; }
+  .hero-eyebrow { font-size: 24px; }
 
   .pqs-capsule { grid-template-columns: 1fr; border-radius: 40px; min-height: auto; }
   .pqs-media { min-height: 240px; order: -1; }
