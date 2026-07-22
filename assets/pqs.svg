@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1080" viewBox="0 0 1000 1080" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Astronaut mascot in a garden by a pond">
+  <defs>
+    <linearGradient id="p-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#69b0e6"/>
+      <stop offset="55%" stop-color="#a9d3f0"/>
+      <stop offset="100%" stop-color="#dbeef8"/>
+    </linearGradient>
+    <linearGradient id="p-pond" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bfe0ee"/>
+      <stop offset="100%" stop-color="#9cc7e6"/>
+    </linearGradient>
+    <radialGradient id="p-visor" cx="50%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#5b6b8a"/>
+      <stop offset="100%" stop-color="#2b3350"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="1000" height="1080" fill="url(#p-sky)"/>
+  <!-- Clouds -->
+  <g fill="#ffffff" opacity="0.85">
+    <ellipse cx="760" cy="230" rx="150" ry="46"/>
+    <ellipse cx="640" cy="255" rx="90" ry="34"/>
+  </g>
+
+  <!-- Green mossy hills -->
+  <path fill="#7cbf59" d="M0 700 Q160 560 380 620 Q560 670 720 590 Q880 520 1000 600 L1000 1080 L0 1080 Z"/>
+  <path fill="#69b04b" d="M560 660 Q740 560 1000 640 L1000 1080 L520 1080 Z"/>
+
+  <!-- Pond -->
+  <path fill="url(#p-pond)" d="M120 860 Q420 780 720 850 Q900 890 1000 860 L1000 1080 L60 1080 Z"/>
+  <ellipse cx="500" cy="905" rx="360" ry="34" fill="#ffffff" opacity="0.18"/>
+
+  <!-- Water lily -->
+  <g transform="translate(760,960)">
+    <ellipse cx="0" cy="6" rx="46" ry="12" fill="#5aa0c9" opacity="0.5"/>
+    <g fill="#ffffff">
+      <path d="M0 -22 Q8 -6 0 4 Q-8 -6 0 -22z"/>
+      <path d="M18 -14 Q14 2 2 4 Q6 -10 18 -14z"/>
+      <path d="M-18 -14 Q-14 2 -2 4 Q-6 -10 -18 -14z"/>
+      <path d="M30 2 Q18 8 6 6 Q16 -2 30 2z"/>
+      <path d="M-30 2 Q-18 8 -6 6 Q-16 -2 -30 2z"/>
+    </g>
+    <circle cx="0" cy="-2" r="6" fill="#f4d55a"/>
+  </g>
+
+  <!-- Small white flowers -->
+  <g fill="#ffffff">
+    <circle cx="250" cy="760" r="9"/><circle cx="268" cy="752" r="7"/><circle cx="236" cy="752" r="7"/>
+    <circle cx="330" cy="800" r="8"/><circle cx="315" cy="808" r="6"/>
+  </g>
+
+  <!-- Simplified astronaut mascot -->
+  <g transform="translate(430,470)">
+    <!-- reflection -->
+    <g opacity="0.28" transform="translate(0,470) scale(1,-0.7)">
+      <rect x="-70" y="0" width="140" height="180" rx="60" fill="#ffffff"/>
+      <circle cx="0" cy="220" r="92" fill="#ffffff"/>
+    </g>
+    <!-- body -->
+    <rect x="-72" y="150" width="144" height="210" rx="62" fill="#ffffff"/>
+    <!-- arms -->
+    <rect x="-104" y="180" width="44" height="120" rx="22" fill="#ffffff"/>
+    <rect x="62" y="180" width="44" height="120" rx="22" fill="#ffffff"/>
+    <!-- belt + trims -->
+    <rect x="-72" y="250" width="144" height="16" rx="8" fill="#8ea2e0"/>
+    <!-- helmet -->
+    <circle cx="0" cy="60" r="96" fill="#ffffff"/>
+    <ellipse cx="0" cy="52" rx="66" ry="60" fill="url(#p-visor)"/>
+    <!-- little pink camera in hand -->
+    <g transform="translate(-96,236)"><rect x="-16" y="-12" width="34" height="24" rx="5" fill="#f2a6c0"/><circle cx="1" cy="0" r="7" fill="#4a7a5a"/></g>
+  </g>
+</svg>
