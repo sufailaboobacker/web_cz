@@ -1,15 +1,11 @@
-# web_cz
 
-Cozmo Travel landing page.
+  # Replicate Existing Design
 
-## Hero section
+  This is a code bundle for Replicate Existing Design. The original project is available at https://www.figma.com/design/xijF9mpXTV8FvRmb3NHvEU/Replicate-Existing-Design.
 
-A responsive landing-page hero built with plain HTML + CSS:
+  ## Running the code
 
-- **`index.html`** — header/navigation and the hero markup.
-- **`css/styles.css`** — design tokens, header, hero, and responsive rules.
-- **`assets/hero.svg`** — background placeholder (Paris skyline). Swap this for
-  the final photograph by replacing the file, or point
-  `.hero-media { background-image }` in `css/styles.css` at `assets/hero.jpg`.
+  Run `npm i` to install the dependencies.
 
-Open `index.html` in a browser to view it — no build step required.
+  Run `npm run dev` to start the development server.
+  
