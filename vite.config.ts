@@ -16,9 +16,9 @@ function figmaAssetResolver() {
   }
 }
 
-export default defineConfig(({ command }) => ({
-  // Served from https://<user>.github.io/web_cz/ in production; root during dev.
-  base: command === 'build' ? '/web_cz/' : '/',
+export default defineConfig({
+  // Netlify serves from the site root.
+  base: '/',
 
   plugins: [
     figmaAssetResolver(),
@@ -36,4 +36,4 @@ export default defineConfig(({ command }) => ({
 
   // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
   assetsInclude: ['**/*.svg', '**/*.csv'],
-}))
+})
